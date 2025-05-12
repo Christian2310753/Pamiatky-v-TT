@@ -1,0 +1,96 @@
+body
+{
+  scroll-behavior: smooth;
+}
+
+#main2 
+{
+  display: flex;
+  gap: 1.5rem; 
+  padding: 20px;
+  margin: 1rem;
+}
+
+#Obsah
+{
+  color: #ffffff;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+}
+
+.NavVlavo
+{
+  width: 25%;
+  background: linear-gradient(to bottom, #2e4384, #304385, #213979, #21347b, #1d2d6b, #172a5e );
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-left: 4rem;
+  position: sticky;
+  top: 1rem;        
+  bottom: 1rem;  
+  align-self: flex-start; 
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.NavVlavo a
+{
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  transition: color 0.2s;
+}
+
+.NavVlavo a:hover
+{
+    color: #c5a170;
+}
+
+.NavVlavo a.active
+{
+  color: #c5a170;
+  transition: color 0.2s;
+}
+
+.NavVlavo a.active:hover
+{
+  color: #d3b795;
+}
+
+.historia-pamiatky 
+{
+  width: 75%;
+  padding: 1rem;
+  margin-right: 4rem;
+}
+
+#História-a-Pamiatky
+{
+  color: #21347b;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.1rem;
+}
+
+#poslednýP
+{
+  font-weight: bold;
+}
+
+.Nadpisy
+{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #21347b;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.historia-pamiatky p
+{
+  color: #21347b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
