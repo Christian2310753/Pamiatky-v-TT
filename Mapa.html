@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+   Mapa
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="icon" href="https://www.trnava.sk/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+</head>
+<body>
+<header id="header">
+    <a href="index.html"><img src="obrázky/logo.svg" height="80"></a>
+</header>
+<nav class="navbar">
+    <a href="index.html">Domov</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Mapa.html" class="active">Mapa</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="História a pamiatky.html">História a pamiatky</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Prihláška a spätná väzba.html">Prihláška a spätná väzba</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Fotoalbum.html">Fotoalbum</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="KontaktDole">Kontakt</a>
+<script>
+    document.getElementById("KontaktDole").addEventListener("click", function(e) 
+    {e.preventDefault(); document.getElementById("KontaktnéInfoDole").scrollIntoView({ behavior: "smooth" });});
+</script>
+</nav>
+        <main id="main">
+            <div id="map"></div>
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+            <script>
+              var map = L.map('map').setView([48.3774, 17.5872], 14);
+          
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+                .addTo(map);
+          
+              L.marker([48.380461090960466, 17.588325898736095])
+                .addTo(map)
+                .bindPopup('<b>Katedrála sv. Jána Krstiteľa</b><br>Prvá baroková stavba na Slovensku.');
+          
+              L.marker([48.37785875996674, 17.585458155586622])
+                .addTo(map)
+                .bindPopup('<b>Mestská veža</b><br>Známa veža zo 16. storočia so 143 schodmi vedúcimi na vrchol, odkiaľ sa naskytá široký výhľad na mesto a hory.');
+
+                L.marker([48.377706786669194, 17.585803563559953])
+                .addTo(map)
+                .bindPopup('<b>Súsošie Najsvätejšej Trojice</b><br>Impozantné barokové súsošie, ktoré vytvoril Ján Krištof Khien v roku 1695.');
+
+                L.marker([48.37864949991729, 17.591368793143616])
+                .addTo(map)
+                .bindPopup('<b>Súsošie sv. Jozefa</b><br>V roku 1731 bolo postavené súsošie z vďaky za ukončenie moru, ktoré vytvoril domáci sochár I. Melczer.');
+
+                L.marker([48.378974683247804, 17.5914382146416])
+                .addTo(map)
+                .bindPopup('<b>Bazilika sv. Mikuláša</b><br>Je charakteristickou dominantou Trnavy, postavená v rokoch 1380-1421.');
+
+                L.marker([48.378062952044786, 17.5900340787915])
+                .addTo(map)
+                .bindPopup('<b>Synagóga status quo</b><br>Dvojvežová stavba s priečelím zdobeným vežami a tabuľami Desatora.');
+
+                L.marker([48.37748231880448, 17.5853610302279])
+                .addTo(map)
+                .bindPopup('<b>Divadlo Jána Palárika</b><br>Klasicistická stavba divadla bola realizovaná podľa plánov Bernharda Grünna v roku 1831.');
+
+                L.marker([48.37675162685359, 17.58575974108427])
+                .addTo(map)
+                .bindPopup('<b>Mestská Radnica</b><br>Tvorí ju komplex stavieb od gotiky po baroko.');
+
+                L.marker([48.374002450266865, 17.58745744057048])
+                .addTo(map)
+                .bindPopup('<b>Kostol sv. Heleny</b><br>Gotická pamiatka z polovice 14. storočia.');
+
+                L.marker([48.378242508733805, 17.588205155433414])
+                .addTo(map)
+                .bindPopup('<b>Kostol sv. Anny – uršulínsky</b><br>Kostol postavili uršulínky z vena rehoľníčok a darov dobrodincov koncom 18. storočia.');
+
+                L.marker([48.378643802828584, 17.589124904176344])
+                .addTo(map)
+                .bindPopup('<b>Šľachtický konvikt</b><br>Veľkolepú barokovú budovu dala postaviť Mária Terézia pre študentov Trnavskej univerzity zo šľachtických rodín.');
+
+                L.marker([48.37875763203157, 17.590226856096884])
+                .addTo(map)
+                .bindPopup('<b>Dom hudby</b><br>Baroková budova postavená na stredovekých základoch.');
+
+                L.marker([48.37692748531995, 17.583200584256666])
+                .addTo(map)
+                .bindPopup('<b>Mestské opevnenie - Bernolákova brána</b><br>Jedno z mála zachovaných najstarších tehlových opevnení na Slovensku.');
+
+                L.marker([48.37861239567205, 17.592334750400653])
+                .addTo(map)
+                .bindPopup('<b>Arcibiskupský palác</b><br>Významná renesančná pamiatka vybudovaná Mikulášom Oláhom v rokoch 1542 – 1562.');
+
+                L.marker([48.3767458972588, 17.5885288965804])
+                .addTo(map)
+                .bindPopup('<b>Kostol sv. Jozefa – paulínsky</b><br>Stavbu začali kalvíni v roku 1616. Kostol spája barok s prvkami nemeckej renesancie.');
+
+                L.marker([48.37579781781088, 17.593089994844853])
+                .addTo(map)
+                .bindPopup('<b>Kostol Nanebovzatie Panny Márie – klariský</b><br>K najstarším kláštorným komplexom mesta patrí klariský kostol a kláštor.');
+
+                L.marker([48.37323832429373, 17.58621645719433])
+                .addTo(map)
+                .bindPopup('<b>Evanjelický kostol a. v.</b><br>Netypická stavba postavená podľa projektu architekta Jozefa Marka v roku 1924.');
+
+                L.marker([48.37714343487482, 17.583578420389262])
+                .addTo(map)
+                .bindPopup('<b>Kostol sv. Jakuba</b><br>Františkánsky kostol sa pýši najväčším počtom oltárov v Trnave. Celkovo sa ich tu nachádza až 14.');
+
+                L.marker([48.379232141457216, 17.59146032595334])
+                .addTo(map)
+                .bindPopup('<b>Oláhov seminár</b><br>Prvý uhorský seminár z roku 1561, postavený arcibiskupom Mikulášom Oláhom.');
+
+                L.marker([48.37786683814982, 17.591091408949104])
+                .addTo(map)
+                .bindPopup('<b>Ortodoxná synagóga</b><br>Má jednoduché priečelie bez veží ozdobené len kamennými tabuľami Desatora.');
+
+                L.marker([48.38070005309158, 17.58249049454749])
+                .addTo(map)
+                .bindPopup('<b>Kopplov kaštieľ</b><br>Postavila ho rodina veľkostatkára Koppla začiatkom 20. storočia. V súčasnosti je sídlom Galérie Jána Koniarka.');
+            </script>
+        </main>
+        <footer id="footer">
+  <div class="footcontainer">
+  <div class="footer_logo">
+  <img src="obrázky/footer_logo.svg" height="150">
+  </div>
+<div>
+<div class="social-login-icons">
+  <div class="socialcontainer">
+    <div class="icon social-icon-1-1">
+      <svg viewBox="0 0 512 512" height="1.7em" fill="white">
+        <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+        </path>
+      </svg>
+    </div>
+    <div class="social-icon-1">
+      <a href="https://x.com/trnava"><svg viewBox="0 0 512 512" height="1.7em" fill="white">
+        <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+        </path>
+      </svg></a>
+    </div>
+  </div>
+  <div class="socialcontainer">
+    <div class="icon social-icon-2-2">
+      <svg fill="white" viewBox="0 0 448 512" height="1.5em" >
+        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+        </path>
+      </svg>
+    </div>
+    <div class="social-icon-2">
+      <a href="https://www.instagram.com/mesto_trnava/"><svg fill="white" viewBox="0 0 448 512" height="1.5em" >
+        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+        </path>
+      </svg></a>
+    </div>
+  </div>
+  <div class="socialcontainer">
+    <div class="icon social-icon-3-3">
+      <svg viewBox="0 0 384 512" fill="white" height="1.6em" >
+        <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z">
+        </path>
+      </svg>
+    </div>
+    <div class="social-icon-3">
+      <a href="https://www.facebook.com/trnava"><svg viewBox="0 0 384 512" fill="white" height="1.6em">
+        <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z">
+        </path>
+      </svg></a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="kontakt-info" id="KontaktnéInfoDole">
+  <div class="kontakt-row">
+    <img src="obrázky/home.png" height="20">
+    <div>
+      Mesto Trnava<br>
+      Hlavná ulica 1<br>
+      917 71 Trnava
+    </div>
+  </div>
+  <div class="kontakt-row">
+    <img src="obrázky/envelope.png" height="20">
+    <div>info@trnava.sk</div>
+  </div>
+  <div class="kontakt-row">
+    <img src="obrázky/telephone-handle-silhouette.png" height="20">
+    <div>+421 33 32 36 101</div>
+  </div>
+</div>
+</div>
+<div class="autor">
+  Tento web bol vytvorený ako súčasť školského projektu na predmet Grafické systémy.<br>
+  Autor: Christián Paulíček, © 2025
+</div>
+<div class="arrow">
+  <a id="spathore" title="Späť na vrch">
+    <img src="obrázky/long-arrow-pointing-up.png" height="30" alt="Späť na vrch">
+  </a>
+</div>
+<script>
+  document.getElementById("spathore").addEventListener("click", function(e) 
+  {e.preventDefault(); window.scrollTo({top: 0, behavior: "smooth"});});
+</script>
+</footer>
+</body>
+</html>
