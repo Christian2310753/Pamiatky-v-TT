@@ -23,3 +23,16 @@
 {
     transform: translateY(-3px);
 }
+
+@media (max-width: 600px)
+{
+    .foto-container
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+    #Syn
+    {
+        height: 100%;
+    }
+}
