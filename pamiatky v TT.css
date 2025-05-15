@@ -86,3 +86,23 @@
   {
     filter: brightness(0) saturate(100%) sepia(1) hue-rotate(10deg) invert(74%) sepia(24%) saturate(692%) hue-rotate(358deg) brightness(96%) contrast(92%);
   }
+
+ @media (max-width: 600px)
+  {
+    #body1
+    {
+      overflow-x: hidden;
+    }
+
+    #body1::before
+    {
+      background-image: url();
+      width: 100%;
+    }
+
+    #main1
+    {
+      margin-right: 0;
+      padding: 0;
+    }
+  }
