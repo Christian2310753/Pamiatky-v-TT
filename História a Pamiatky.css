@@ -1,6 +1,8 @@
-body
+#body2
 {
   scroll-behavior: smooth;
+  margin: 0;
+  overflow-x: visible;
 }
 
 #main2 
@@ -93,4 +95,56 @@ body
   color: #21347b;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1rem;
+}
+
+@media (max-width: 600px)
+{
+  #header
+  {
+    padding-left: 0;
+  }
+  .navbar
+  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #main2
+  {
+    overflow: visible;
+    padding: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 6px;
+  }
+  .NavVlavo
+{
+    width: 100%;
+    height: 100%;
+    padding-right: 7rem;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    background: linear-gradient(to bottom, #2e4384, #304385, #213979, #21347b, #1d2d6b, #172a5e);
+    border-radius: 1rem;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    margin-right: 0;
+    position: sticky;
+}
+
+.NavVlavo a
+{
+  text-align: left;
+}
+
+  .historia-pamiatky 
+{
+  width: auto;
+  padding: 3px;
+  margin-right: 4px;
+}
 }
